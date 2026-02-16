@@ -1,0 +1,77 @@
+- type: entity
+  id: StationGunBase
+  parent: BaseStructure
+  # abstract: true
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Cannons/body.rsi
+    layers:
+    - state: body-0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-2,-6,2,6"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 1000
+- type: entity
+  id: StationGunBarrelBase
+  parent: StationGunBase
+  # abstract: true
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Guns/Cannons/barrel.rsi
+    layers:
+    - state: barrel
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-6,0.45,6"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 1000
+
+  # - type: InteractionOutline
+  # - type: Damageable
+  #   damageContainer: StructuralInorganic
+  #   damageModifierSet: Electronic
+  # - type: DeviceNetwork
+  #   deviceNetId: Wireless
+  #   receiveFrequencyId: BasicDevice
+  # - type: WirelessNetworkConnection
+  #   range: 200
+  # - type: DeviceLinkSink
+  #   ports:
+  #   - Trigger
+  # - type: AutoShootGun
+  # - type: GunSignalControl
+  # - type: ContainerContainer
+  #   containers:
+  #     gun_magazine: !type:ContainerSlot
+  # - type: Gun
+  #   selectedMode: SemiAuto
+  #   availableModes:
+  #     - SemiAuto
+  #   projectileSpeed: 100
+  #   fireRate: 1
+  #   soundGunshot:
+  #     path: /Audio/Weapons/Guns/Gunshots/ship_duster.ogg
+  #     params:
+  #       pitch: 0.15
+  #   soundEmpty:
+  #     path: /Audio/Weapons/Guns/Empty/empty.ogg
+  # - type: BallisticAmmoProvider
+  #   whitelist:
+  #     tags:
+  #       - Grenade
+  #   capacity: 1
+  #   soundInsert:
+  #     path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg

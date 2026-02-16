@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by TacoLlama (github)",
+    "size": {
+        "x": 160,
+        "y": 384
+    },
+    "states": [
+        {
+            "name": "body-0"
+        },
+        {
+            "name": "body-1"
+        },
+        {
+            "name": "body-2"
+        },
+        {
+            "name": "body-3"
+        },
+        {
+            "name": "body-4"
+        },
+        {
+            "name": "body-5"
+        },
+        {
+            "name": "body-6"
+        },
+        {
+            "name": "body-7"
+        },
+        {
+            "name": "body-8"
+        },
+        {
+            "name": "body-9"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+- type: entity
+  parent: BaseStructureDynamic
+  id: BaseShell
+  description: How long has that been here? Maybe don't touch it...
+  name: 500mm Space artillery shell
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Starlight/Objects/Weapons/Bombs/cannon_shell.rsi
+    layers:
+      - state: shell
+  - type: Rotatable
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+        - !type:ExplodeBehavior
+  - type: Explosive
+    explosionType: HardBomb
+    totalIntensity: 100
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+        density: 600
+        mask:
+          - MachineMask
+        layer:
+          - MachineLayer
