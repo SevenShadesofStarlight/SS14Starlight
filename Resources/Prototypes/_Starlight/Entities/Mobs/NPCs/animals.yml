@@ -10,3 +10,129 @@
     - Dog
     - Canilunzt
     - GalacticCommon
+
+- type: entity
+  name: squonk
+  parent: MobCockroach
+  id: MobSquonk
+  description: Wow that's sad
+  components:
+  # Starlight-start: Languages
+  - type: LanguageKnowledge
+    speaks:
+    - Mothroach
+    understands:
+    - Moffic
+    - Mothroach
+  # Starlight-end
+  # Starlight-start: Body emotes (wing flap!)
+  - type: BodyEmotes
+    soundsId: MothroachBodyEmotes
+  # Starlight-end
+  # - type: GhostRole
+  #   makeSentient: true
+  #   allowSpeech: true
+  #   allowMovement: true
+  #   name: ghost-role-information-mothroach-name
+  #   description: ghost-role-information-mothroach-description
+  #   rules: ghost-role-information-freeagent-rules
+  #   mindRoles:
+  #   - MindRoleGhostRoleCritterHarmless # Starlight-edit - FreeAgentHarmless -> CritterHarmless
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 120
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  # - type: GhostTakeoverAvailable
+  - type: Speech
+    speechVerb: Moth
+    speechSounds: Squeak
+    allowedEmotes: ['Chitter', 'Squeak', 'FlapWings'] # Starlight: Add wing flap
+  - type: MothAccent
+  - type: Sprite
+    sprite: _Starlight/Mobs/Animals/squonk.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: squonk
+  - type: Item
+    size: Large
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      40: Critical
+      60: Dead
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: squonk
+      Critical:
+        Base: squonk_dead
+      Dead:
+        Base: squonk_dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4
+    weightlessAcceleration: 1.5
+    weightlessFriction: 1
+    baseWeightlessModifier: 1
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Moth
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: InsectBlood
+        Quantity: 20
+  - type: Respirator
+    damage:
+      types:
+        Asphyxiation: 0.5
+    damageRecovery:
+      types:
+        Asphyxiation: -0.5
+  - type: CombatMode
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatSlime
+      amount: 2
+  - type: Extractable
+    grindableSolutionName: food
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
+    wilhelmProbability: 0.001
+  - type: MobPrice
+    price: 200
+  - type: Tag
+    tags:
+    - Trash
+    - CannotSuicide
+    - VimPilot
+  - type: CanEscapeInventory
+  - type: NpcFactionMember
+    factions:
+    - Mouse
+  - type: Body
+    prototype: Mothroach
+  - type: TypingIndicator
+    proto: slime
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 60
+      behaviors:
+      - !type:GibBehavior
+        recursive: false
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Mouse_burning
