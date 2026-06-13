@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by SevenShades",
+  "size": {
+    "x": 96,
+    "y": 352
+  },
+  "states": [
+    {
+      "name": "body"
+    }
+  ]
+}

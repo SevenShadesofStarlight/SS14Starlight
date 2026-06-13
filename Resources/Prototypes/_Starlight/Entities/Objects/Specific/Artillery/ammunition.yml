@@ -1,0 +1,155 @@
+#region Base Items
+- type: entity
+  id: BaseArtilleryFood
+  placement:
+    mode: PlaceFree
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Artillery/Ammunition/ammo.rsi
+  - type: Rotatable
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape: !type:PolygonShape
+  #         vertices:
+  #         - 0, 0.9
+  #         - 0.3, 0
+  #         - 0.3, -0.8
+  #         - -0.3, -0.8
+  #         - -0.3, 0
+  #       density: 600
+  #       mask:
+  #       - MachineMask
+  #       layer:
+  #       - MachineLayer
+  - type: Item
+    size: Ginormous
+    allowDirectHandPickup: false
+  - type: RestrictNestingItem
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.3
+    sprintModifier: 0.3
+  - type: HeldSpeedModifier
+
+#region Shells
+- type: entity
+  parent: BaseArtilleryFood
+  id: BaseArtilleryShell
+  name: 800mm anti-station high explosive shell
+  components:
+  - type: Sprite
+    state: shell
+  - type: ArtilleryShell
+    prototype: ProjectileArtilleryHE
+    loadedSprite:
+      sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+    name: shell
+  - type: Tag
+    tags:
+    - ArtilleryShell
+
+
+#region Propellant Charges
+- type: entity
+  parent: BaseArtilleryFood
+  id: BaseArtilleryPropellant
+  name: Propellant charge
+  components:
+  - type: Sprite
+    layers:
+      - state: casing
+      - state: charge
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #           bounds: -0.3, -0.85, 0.3, 0.5
+  #       density: 600
+  #       mask:
+  #         - MachineMask
+  #       layer:
+  #         - MachineLayer
+  - type: ArtilleryCharge
+    loadedSprite:
+      sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+    name: charge
+  - type: Tag
+    tags:
+    - ArtilleryCharge
+
+- type: entity
+  parent: BaseArtilleryFood
+  id: ArtilleryPropellantEmpty
+  name: Propellant charge
+  components:
+  - type: Sprite
+    state: casing
+  - type: ArtilleryCharge
+    spent: true
+    loadedSprite:
+      sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+    name: casing
+  # - type: Fixtures
+  #   fixtures:
+  #     fix1:
+  #       shape:
+  #         !type:PhysShapeAabb
+  #           bounds: -0.3, -0.85, 0.3, 0.2
+  #       density: 600
+  #       mask:
+  #         - MachineMask
+  #       layer:
+  #         - MachineLayer
+
+
+#region Projectiles
+- type: entity
+  id: ProjectileArtilleryHE
+  name: 800mm anti-station high explosive shell
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Artillery/ammo.rsi
+    rotation: 180
+    layers:
+      - state: shell
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 20000 # ~15 tile radius.
+    intensitySlope: 5
+    maxIntensity: 50
+    canCreateVacuum: true
+  - type: RadarBlip
+    color: "#FF2200"
+    scale: 3.0
+    shape: Triangle
+    requireInSpace: true
+
+# Muzzle flash
+- type: entity
+  id: ArtilleryMuzzleFlashEffect
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.2
+  - type: Sprite
+    drawdepth: BelowMobs
+    rotation: 270
+    offset: 0, -1.2
+    layers:
+    - shader: unshaded
+      map: ["enum.EffectLayers.Unshaded"]
+      sprite: _Starlight/Objects/Specific/Artillery/muzzle_flash.rsi
+      state: muzzle-flash
+  - type: EffectVisuals
+  - type: Tag
+    tags:
+      - HideContextMenu
+  - type: AnimationPlayer

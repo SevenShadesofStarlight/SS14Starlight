@@ -125,6 +125,12 @@ namespace Content.Shared.Containers.ItemSlots
         public bool DisableEject = false;
 
         /// <summary>
+        /// Starlight - allows disabling the eject animation
+        /// </summary>
+        [DataField]
+        public bool AnimateEject = true;
+
+        /// <summary>
         ///     Whether the item slots system will attempt to insert item from the user's hands into this slot when interacted with.
         ///     It doesn't block other insertion methods, like verbs.
         /// </summary>
@@ -254,6 +260,7 @@ namespace Content.Shared.Containers.ItemSlots
 
             Name = other.Name;
             Locked = other.Locked;
+            AnimateEject = other.AnimateEject; // Starlight edit - exposing animate
             InsertOnInteract = other.InsertOnInteract;
             EjectOnInteract = other.EjectOnInteract;
             EjectOnUse = other.EjectOnUse;

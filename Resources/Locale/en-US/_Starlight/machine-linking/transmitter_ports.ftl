@@ -30,3 +30,6 @@ signal-port-description-gun-5 = Shuttle weapon slot 5.
 
 signal-port-name-gun-6 = Gun Slot 6
 signal-port-description-gun-6 = Shuttle weapon slot 6.
+
+signal-port-name-artillery-data-sender = Artillery System
+signal-port-description-artillery-data-sender = Can be linked to an artillery conrol console to control the artillery system.

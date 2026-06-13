@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Created by SevenShades",
+  "size": {
+    "x": 160,
+    "y": 256
+  },
+  "states": [
+    {
+      "name": "recoil-assembly"
+    }
+  ]
+}

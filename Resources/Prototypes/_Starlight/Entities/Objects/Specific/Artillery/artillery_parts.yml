@@ -1,0 +1,317 @@
+#region Base parts
+- type: entity
+  id: BaseArtilleryPart
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: GravityAffected
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: Pullable
+  - type: Tag
+    tags:
+      - Structure
+
+- type: entity
+  id: ArtilleryPartBreechBase
+  parent: BaseArtilleryPart
+  abstract: true
+  components:
+  - type: MultipartMachinePart
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Artillery/Parts/breech.rsi
+    layers:
+    - state: breech-closed
+      map: ["enum.ArtilleryBreechVisuals.OpenLayer"]
+    - state: error
+      map: ["enum.ArtilleryBreechVisuals.LoadedLayer"]
+      visible: false
+  - type: Appearance
+  - type: ArtilleryBreech
+    side: ForwardBreech
+    soundOpen:
+      path: /Audio/_Starlight/Machines/artillery_breech.ogg
+      params:
+        variation: 0.05
+        pitch: 0.75
+    soundClose:
+      path: /Audio/_Starlight/Machines/artillery_breech.ogg
+      params:
+        variation: 0.05
+        pitch: 1
+  - type: ContainerContainer
+    containers:
+      breech_slot: !type:ContainerSlot { }
+
+#region Barrels
+- type: entity
+  id: ArtilleryPartBarrelPrimary
+  name: Primary Barrel
+  parent: BaseArtilleryPart
+  components:
+  - type: Sprite
+    offset: 0, 0.5
+    sprite: _Starlight/Objects/Specific/Artillery/Parts/barrel-primary.rsi
+    state: barrel-primary
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.7, -2, 0.7, 2.6
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: MultipartMachinePart
+  - type: ArtilleryPrimaryBarrel
+
+
+- type: entity
+  id: ArtilleryPartBarrelSecondary
+  name: Secondary Barrel
+  parent: BaseArtilleryPart
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Artillery/Parts/barrel-secondary.rsi
+    state: barrel-secondary
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.5, -4.3, 0.5, 4
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: MultipartMachinePart
+  - type: ArtillerySecondaryBarrel
+    barrelLength: 4.5
+
+#region Body
+- type: entity
+  id: ArtilleryPartBody
+  name: Artillery body
+  parent: BaseArtilleryPart
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Artillery/Parts/body.rsi
+    state: body
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -0.75, -5.4, 0.75, -2.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+      fix2:
+        shape: !type:PhysShapeAabb
+          bounds: -0.75, -2.5, 0.125, -0.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+      fix3:
+        shape: !type:PhysShapeAabb
+          bounds: -0.125, -0.5, 0.125, 0.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+      fix4:
+        shape: !type:PhysShapeAabb
+          bounds: -0.125, 0.5, 0.75, 2.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+      fix5:
+        shape: !type:PolygonShape
+          vertices:
+          - "0.75, 2.5"
+          - "0.75, 5.2"
+          - "0, 5.5"
+          - "-0.75, 5.2"
+          - "-0.75, 2.5"
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: ArtilleryBody
+  - type: MultipartMachine
+    parts:
+      enum.ArtilleryParts.RearBreech:
+        component: ArtilleryBreech
+        offset: -2, 1
+        expectedNode: none
+      enum.ArtilleryParts.ForwardBreech:
+        component: ArtilleryBreech
+        offset: 2, -1
+        expectedNode: none
+      enum.ArtilleryParts.RecoilAssembly:
+        component: ArtilleryRecoilAssembly
+        offset: 0, -4
+        expectedNode: none
+      enum.ArtilleryParts.PrimaryBarrel:
+        component: ArtilleryPrimaryBarrel
+        offset: 0, -8
+        expectedNode: none
+      enum.ArtilleryParts.SecondaryBarrel:
+        component: ArtillerySecondaryBarrel
+        offset: 0, -14
+        expectedNode: none
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSource
+    range: 50
+    ports:
+      - ArtilleryDataSender
+
+#region Breeches
+- type: entity
+  id: ArtilleryPartBreechForward
+  name: Forward breech
+  parent: ArtilleryPartBreechBase
+  components:
+  - type: Sprite
+    offset: -0.5, 0
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.1, -1.5, -1.875, 1.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: ArtilleryBreech
+    side: ForwardBreech
+  - type: ItemSlots
+    slots:
+      breech_slot:
+        whitelist:
+          tags:
+            - ArtilleryShell
+
+- type: entity
+  id: ArtilleryPartBreechAft
+  name: Aft breech
+  parent: ArtilleryPartBreechBase
+  components:
+  - type: Sprite
+    offset: 0.5, 0
+    scale: -1,1
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: 1.1, -1.5, 1.875, 1.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: ArtilleryBreech
+    side: RearBreech
+  - type: ItemSlots
+    slots:
+      breech_slot:
+        animateEject: false
+        whitelist:
+          tags:
+            - ArtilleryCharge
+
+#region Recoil comp
+- type: entity
+  id: ArtilleryPartRecoilAssembly
+  name: Recoil compensation assembly
+  parent: BaseArtilleryPart
+  components:
+  - type: Sprite
+    offset: 0,-0.5
+    sprite: _Starlight/Objects/Specific/Artillery/Parts/recoil-assembly.rsi
+    state: recoil-assembly
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape: !type:PhysShapeAabb
+          bounds: -1.6, -3.6, -1.0, 2.9
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+      fix2:
+        shape: !type:PhysShapeAabb
+          bounds: 1.6, -3.6, 1.0, -0.5
+        density: 1000
+        mask:
+        - FullTileMask
+        layer:
+        - GlassLayer
+  - type: MultipartMachinePart
+  - type: ArtilleryRecoilAssembly
+
+#region Console
+- type: entity
+  parent: BaseComputerAiAccess
+  id: ArtilleryConsole
+  name: Artillery fire control console
+  description: A device that controls and monitors a linked artillery system.
+  components:
+  - type: ApcPowerReceiver
+    powerLoad: 500
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#b030d6"
+  - type: Sprite
+    sprite: Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerScreen"]
+      state: eris_control
+  - type: ArtilleryConsole
+  - type: ActivatableUI
+    key: enum.ArtilleryConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ArtilleryConsoleUiKey.Key:
+        type: ArtilleryConsoleBoundUserInterface
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+  - type: DeviceLinkSink
+    ports:
+      - ArtilleryDataReceiver
+

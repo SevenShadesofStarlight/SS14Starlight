@@ -639,7 +639,7 @@ namespace Content.Shared.Containers.ItemSlots
                 return false;
 
             if (user != null)
-                _handsSystem.PickupOrDrop(user.Value, item.Value);
+                _handsSystem.PickupOrDrop(user.Value, item.Value, animate: slot.AnimateEject); // Starlight edit - exposing animate
 
             return true;
         }

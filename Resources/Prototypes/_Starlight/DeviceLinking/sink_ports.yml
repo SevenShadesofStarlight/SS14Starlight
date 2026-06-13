@@ -27,3 +27,8 @@
   id: TicketMachineBurnTickets
   name: signal-port-name-ticket-machine-burntickets
   description: signal-port-description-ticket-machine-burntickets
+
+- type: sinkPort
+  id: ArtilleryDataReceiver
+  name: signal-port-name-artillery-data-receiver
+  description: signal-port-description-artillery-data-receiver

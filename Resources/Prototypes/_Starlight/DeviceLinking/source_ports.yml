@@ -55,3 +55,9 @@
   id: Gun6
   name: signal-port-name-gun-6
   description: signal-port-description-gun-6
+
+- type: sourcePort
+  id: ArtilleryDataSender
+  name: signal-port-name-artillery-data-sender
+  description: signal-port-description-artillery-data-sender
+  defaultLinks: [ ArtilleryDataReceiver ]

@@ -334,9 +334,10 @@ public sealed class MultipartMachineSystem : SharedMultipartMachineSystem
                 continue;
             }
 
-            if (!TryComp<ConstructionComponent>(entity, out var construction) ||
+            if  (!string.IsNullOrEmpty(part.Graph) && //Starlight, allow empty graphs
+                (!TryComp<ConstructionComponent>(entity, out var construction) ||
                 construction.Graph != part.Graph ||
-                construction.Node != part.ExpectedNode)
+                construction.Node != part.ExpectedNode))
             {
                 // This constructable doesn't match the right graph we expect
                 continue;

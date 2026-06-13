@@ -18,6 +18,12 @@
   id: Arachnid
 
 - type: Tag
+  id: ArtilleryShell
+
+- type: Tag
+  id: ArtilleryCharge
+
+- type: Tag
   id: AutoMender
 
 - type: Tag

@@ -15,3 +15,6 @@ signal-port-description-ticket-machine-nextnumber = Changes ticket number to nex
 
 signal-port-name-ticket-machine-burntickets = Burn Tickets
 signal-port-description-ticket-machine-burntickets = Burns all served tickets when triggered.
+
+signal-port-name-artillery-data-receiver = Artillery Console
+signal-port-description-artillery-data-receiver = Links to an artillery system for fire control
