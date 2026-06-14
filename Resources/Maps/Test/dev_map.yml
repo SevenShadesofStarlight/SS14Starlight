@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/07/2026 06:54:51
-  entityCount: 3252
+  time: 06/13/2026 23:43:02
+  entityCount: 3258
 maps:
 - 23
 grids:
@@ -2113,11 +2113,11 @@ entities:
       fixtures: {}
 - proto: ArtilleryConsole
   entities:
-  - uid: 3253
+  - uid: 3258
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
-      pos: 31.5,9.5
+      pos: 31.5,10.5
       parent: 1
 - proto: ArtilleryPartBarrelPrimary
   entities:
@@ -2146,7 +2146,7 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        3253:
+        3258:
         - - ArtilleryDataSender
           - ArtilleryDataReceiver
     - type: MultipartMachine
@@ -3165,50 +3165,80 @@ entities:
       parent: 2709
     - type: Fixtures
       fixtures: {}
-# - proto: BaseArtilleryPropellant
-#   entities:
-#   - uid: 74
-#     components:
-#     - type: Transform
-#       pos: 28.5,8.5
-#       parent: 1
-#   - uid: 85
-#     components:
-#     - type: Transform
-#       pos: 28.5,6.5
-#       parent: 1
-#   - uid: 441
-#     components:
-#     - type: Transform
-#       pos: 28.5,10.5
-#       parent: 1
-#   - uid: 3252
-#     components:
-#     - type: Transform
-#       pos: 28.5,4.5
-#       parent: 1
-# - proto: BaseArtilleryShell
-#   entities:
-#   - uid: 3199
-#     components:
-#     - type: Transform
-#       pos: 38.5,6.5
-#       parent: 1
-#   - uid: 3203
-#     components:
-#     - type: Transform
-#       pos: 38.5,4.5
-#       parent: 1
-#   - uid: 3251
-#     components:
-#     - type: Transform
-#       pos: 38.5,8.5
-#       parent: 1
-#   - uid: 3254
-#     components:
-#     - type: Transform
-#       pos: 38.5,10.5
-#       parent: 1
+- proto: BaseArtilleryPropellant
+  entities:
+  - uid: 74
+    components:
+    - type: Transform
+      pos: 28.5,8.5
+      parent: 1
+  - uid: 85
+    components:
+    - type: Transform
+      pos: 28.5,6.5
+      parent: 1
+  - uid: 441
+    components:
+    - type: Transform
+      pos: 28.5,10.5
+      parent: 1
+  - uid: 3227
+    components:
+    - type: Transform
+      pos: 28.5,9.5
+      parent: 1
+  - uid: 3228
+    components:
+    - type: Transform
+      pos: 28.5,7.5
+      parent: 1
+  - uid: 3252
+    components:
+    - type: Transform
+      pos: 28.5,4.5
+      parent: 1
+  - uid: 3253
+    components:
+    - type: Transform
+      pos: 28.5,5.5
+      parent: 1
+- proto: BaseArtilleryShell
+  entities:
+  - uid: 3199
+    components:
+    - type: Transform
+      pos: 38.5,6.5
+      parent: 1
+  - uid: 3203
+    components:
+    - type: Transform
+      pos: 38.5,4.5
+      parent: 1
+  - uid: 3251
+    components:
+    - type: Transform
+      pos: 38.5,8.5
+      parent: 1
+  - uid: 3254
+    components:
+    - type: Transform
+      pos: 38.5,10.5
+      parent: 1
+  - uid: 3255
+    components:
+    - type: Transform
+      pos: 38.5,5.5
+      parent: 1
+  - uid: 3256
+    components:
+    - type: Transform
+      pos: 38.5,7.5
+      parent: 1
+  - uid: 3257
+    components:
+    - type: Transform
+      pos: 38.5,9.5
+      parent: 1
 - proto: BaseBallBat
   entities:
   - uid: 2686

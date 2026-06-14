@@ -207,7 +207,7 @@
     fixtures:
       fix1:
         shape: !type:PhysShapeAabb
-          bounds: -1.1, -1.5, -1.875, 1.5
+          bounds: 1.5, -1.5, -1.875, 1.5
         density: 1000
         mask:
         - FullTileMask
@@ -234,7 +234,7 @@
     fixtures:
       fix1:
         shape: !type:PhysShapeAabb
-          bounds: 1.1, -1.5, 1.875, 1.5
+          bounds: -1.5, -1.5, 1.875, 1.5
         density: 1000
         mask:
         - FullTileMask
@@ -301,6 +301,10 @@
       state: computer
     - map: ["computerLayerScreen"]
       state: eris_control
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerKeys"]
+      state: med_key
   - type: ArtilleryConsole
   - type: ActivatableUI
     key: enum.ArtilleryConsoleUiKey.Key

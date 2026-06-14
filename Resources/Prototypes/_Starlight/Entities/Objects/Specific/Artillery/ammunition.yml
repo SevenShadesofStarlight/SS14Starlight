@@ -47,6 +47,7 @@
     prototype: ProjectileArtilleryHE
     loadedSprite:
       sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+      state: error
     name: shell
   - type: Tag
     tags:
@@ -77,6 +78,7 @@
   - type: ArtilleryCharge
     loadedSprite:
       sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+      state: error
     name: charge
   - type: Tag
     tags:
@@ -93,6 +95,7 @@
     spent: true
     loadedSprite:
       sprite: _Starlight/Objects/Specific/Artillery/Ammunition/loaded.rsi
+      state: error
     name: casing
   # - type: Fixtures
   #   fixtures:
@@ -115,7 +118,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _Starlight/Objects/Specific/Artillery/ammo.rsi
+    sprite: _Starlight/Objects/Specific/Artillery/Ammunition/ammo.rsi
     rotation: 180
     layers:
       - state: shell

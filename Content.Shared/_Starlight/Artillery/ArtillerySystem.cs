@@ -127,8 +127,12 @@ public sealed partial class ArtillerySystem : EntitySystem
 
     private void SetLoadedData(Entity<ArtilleryBreechComponent> ent)
     {
-        GetBreechState(ent, ent.Comp.Side, out _, out _, out _, out var loaded);
         var state = ent.Comp.State;
+
+        if (!_itemSlots.TryGetSlot(ent, ArtilleryBreechComponent.BreechSlotId, out var breechSlot))
+            return;
+
+        var loaded = breechSlot.ContainerSlot?.ContainedEntity;
 
         if (TryComp<ArtilleryShellComponent>(loaded, out var shellComp))
             {
@@ -269,7 +273,7 @@ public sealed partial class ArtillerySystem : EntitySystem
         if (chargeComp.Spent)
             return false;
 
-        if (forwardBreechComp.State != ArtilleryBreechState.Open || rearBreechComp.State != ArtilleryBreechState.Open)
+        if (forwardBreechComp.State != ArtilleryBreechState.Closed || rearBreechComp.State != ArtilleryBreechState.Closed)
             return false;
 
         return true;

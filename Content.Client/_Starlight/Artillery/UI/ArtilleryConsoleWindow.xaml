@@ -1,4 +1,5 @@
-<controls:FancyWindow  xmlns="https://spacestation14.io"
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:style="clr-namespace:Content.Client.Stylesheets"
@@ -6,55 +7,112 @@
     Title="Artillery Fire Control">
 
     <BoxContainer Orientation="Vertical">
-        <BoxContainer Margin="0 5 10 10" Orientation="Vertical">
+        <BoxContainer Margin="0,5,10,10" Orientation="Vertical">
             <BoxContainer Margin="0" Orientation="Horizontal">
                 <BoxContainer Margin="0" Orientation="Vertical">
-                <!-- Rear Breech -->
-                    <Label Text="Aft Breech" StyleClasses="StatusFieldTitle" HorizontalAlignment="Center"/>
-                    <PanelContainer Margin="0" StyleClasses="BackgroundPanelDark" VerticalAlignment="Center">
-                        <SpriteView Name="RearBreechContents" Scale="2 2" SetSize="64 128" OverrideDirection="South" />
+                    <!--  Rear Breech  -->
+                    <Label
+                        HorizontalAlignment="Center"
+                        StyleClasses="StatusFieldTitle"
+                        Text="Aft Breech" />
+                    <PanelContainer
+                        Margin="0"
+                        VerticalAlignment="Center"
+                        StyleClasses="BackgroundPanelDark">
+                        <SpriteView
+                            Name="RearBreechContents"
+                            OverrideDirection="South"
+                            Scale="2 2"
+                            SetSize="64 128" />
                     </PanelContainer>
                     <BoxContainer Orientation="Horizontal">
-                        <Button Name="RearBreechButton" Text="Open Breech" HorizontalExpand="True"/>
+                        <Button
+                            Name="RearBreechButton"
+                            MinWidth="128"
+                            HorizontalExpand="True"
+                            Text="Open Breech" />
                     </BoxContainer>
                 </BoxContainer>
                 <BoxContainer Margin="0" Orientation="Vertical">
-                <!-- Forward Breech -->
-                    <Label Text="Forward Breech" StyleClasses="StatusFieldTitle" HorizontalAlignment="Center"/>
-                    <PanelContainer Margin="0" StyleClasses="BackgroundPanelDark" VerticalAlignment="Center">
-                        <SpriteView Name="ForwardBreechContents" Scale="2 2" SetSize="64 128" OverrideDirection="South" />
+                    <!--  Forward Breech  -->
+                    <Label
+                        HorizontalAlignment="Center"
+                        StyleClasses="StatusFieldTitle"
+                        Text="Forward Breech" />
+                    <PanelContainer
+                        Margin="0"
+                        VerticalAlignment="Center"
+                        StyleClasses="BackgroundPanelDark">
+                        <SpriteView
+                            Name="ForwardBreechContents"
+                            OverrideDirection="South"
+                            Scale="2 2"
+                            SetSize="64 128" />
                     </PanelContainer>
                     <BoxContainer Orientation="Horizontal">
-                        <Button Name="FrontBreechButton" Text="Open Breech" HorizontalExpand="True"/>
+                        <Button
+                            Name="FrontBreechButton"
+                            MinWidth="128"
+                            HorizontalExpand="True"
+                            Text="Open Breech" />
                     </BoxContainer>
                 </BoxContainer>
-                <!--Fire Control -->
-                <BoxContainer Orientation="Vertical" HorizontalExpand="True">
-                    <GridContainer Margin="10 0 0 0" Columns="2" VerticalExpand="True">
-                        <Control MinHeight="20"/>
-                        <Control MinHeight="20"/>
-                        <Label Text="All systems connected" StyleClasses="StatusFieldTitle" />
-                        <TextureRect Name="AssembledState" SetSize="16 16" HorizontalAlignment="Left" HorizontalExpand="True"/>
-                        <Label Text="Aft breech status" StyleClasses="StatusFieldTitle" />
-                        <TextureRect Name="RearBreechStatus" SetSize="16 16" HorizontalAlignment="Left" HorizontalExpand="True"/>
-                        <Label Text="Forward breech status" StyleClasses="StatusFieldTitle" />
-                        <TextureRect Name="ForwardBreechStatus" SetSize="16 16" HorizontalAlignment="Left" HorizontalExpand="True"/>
-                        <Label Text="Charge loaded" StyleClasses="StatusFieldTitle" />
-                        <TextureRect Name="RearBreechLoaded" SetSize="16 16" HorizontalAlignment="Left" HorizontalExpand="True"/>
-                        <Label Text="Shell loaded" StyleClasses="StatusFieldTitle" />
-                        <TextureRect Name="ForwardBreechLoaded" SetSize="16 16" HorizontalAlignment="Left" HorizontalExpand="True"/>
+                <!--  Fire Control  -->
+                <BoxContainer HorizontalExpand="True" Orientation="Vertical">
+                    <GridContainer
+                        Margin="10,0,0,0"
+                        Columns="2"
+                        VerticalExpand="True">
+                        <Control MinHeight="20" />
+                        <Control MinHeight="20" />
+                        <Label StyleClasses="StatusFieldTitle" Text="All systems connected" />
+                        <TextureRect
+                            Name="AssembledState"
+                            HorizontalAlignment="Left"
+                            HorizontalExpand="True"
+                            SetSize="16 16" />
+                        <Label StyleClasses="StatusFieldTitle" Text="Aft breech status" />
+                        <TextureRect
+                            Name="RearBreechStatus"
+                            HorizontalAlignment="Left"
+                            HorizontalExpand="True"
+                            SetSize="16 16" />
+                        <Label StyleClasses="StatusFieldTitle" Text="Forward breech status" />
+                        <TextureRect
+                            Name="ForwardBreechStatus"
+                            HorizontalAlignment="Left"
+                            HorizontalExpand="True"
+                            SetSize="16 16" />
+                        <Label StyleClasses="StatusFieldTitle" Text="Charge loaded" />
+                        <TextureRect
+                            Name="RearBreechLoaded"
+                            HorizontalAlignment="Left"
+                            HorizontalExpand="True"
+                            SetSize="16 16" />
+                        <Label StyleClasses="StatusFieldTitle" Text="Shell loaded" />
+                        <TextureRect
+                            Name="ForwardBreechLoaded"
+                            HorizontalAlignment="Left"
+                            HorizontalExpand="True"
+                            SetSize="16 16" />
                     </GridContainer>
-                    <BoxContainer Orientation="Horizontal" MinWidth="150">
-                            <Button Name="FireButton" Text="Fire artillery system" HorizontalExpand="True"/>
+                    <BoxContainer MinWidth="150" Orientation="Horizontal">
+                        <Button
+                            Name="FireButton"
+                            HorizontalExpand="True"
+                            Text="Fire artillery system" />
                     </BoxContainer>
                 </BoxContainer>
             </BoxContainer>
         </BoxContainer>
-        <!-- Footer -->
+        <!--  Footer  -->
         <BoxContainer Orientation="Vertical">
             <PanelContainer StyleClasses="LowDivider" />
-            <BoxContainer Orientation="Horizontal" Margin="10 2 5 0" VerticalAlignment="Bottom">
-                <Label Text="Ensure clowns clear before firing" StyleClasses="WindowFooterText" />
+            <BoxContainer
+                Margin="10,2,5,0"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+                <Label StyleClasses="WindowFooterText" Text="Ensure clowns clear before firing" />
             </BoxContainer>
         </BoxContainer>
     </BoxContainer>

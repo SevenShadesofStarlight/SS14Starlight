@@ -32,8 +32,8 @@ public enum ArtilleryBreechVisuals
 [Serializable, NetSerializable]
 public enum ArtilleryBreechState
 {
-    Open,
     Closed,
+    Open,
     Opening,
     Closing
 }
