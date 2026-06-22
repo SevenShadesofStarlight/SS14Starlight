@@ -18,3 +18,6 @@ signal-port-description-ticket-machine-burntickets = Burns all served tickets wh
 
 signal-port-name-artillery-data-receiver = Artillery Console
 signal-port-description-artillery-data-receiver = Links to an artillery system for fire control
+
+signal-port-name-set-particle-lambda = Set particle type: lambda
+signal-port-description-set-particle-lambda = Sets the type of particle this device emits to lambda.
