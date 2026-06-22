@@ -33,6 +33,7 @@
   name: signal-port-name-artillery-data-receiver
   description: signal-port-description-artillery-data-receiver
 
-- id: SetParticleLambda
+- type: sinkPort
+  id: SetParticleLambda
   name: signal-port-name-set-particle-lambda
   description: signal-port-description-set-particle-lambda
