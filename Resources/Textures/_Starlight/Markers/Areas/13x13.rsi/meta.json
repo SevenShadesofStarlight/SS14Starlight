@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "State based copyright",
+  "metaAtlas": false,
+  "size": {
+    "x": 416,
+    "y": 416
+  },
+  "states": [
+    {
+      "name": "13x13",
+      "copyright": "SevenShades"
+    }
+  ]
+}

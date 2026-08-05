@@ -595,6 +595,24 @@
     # Tag for reflective vest, used for set bonus detection by ReflectiveSetBonusSystem
 
 - type: Tag
+  id: Ring39a # For room generation
+
+- type: Tag
+  id: Ring39b # For room generation
+
+- type: Tag
+  id: Ring39c # For room generation
+
+- type: Tag
+  id: Ring13 # For room generation
+
+- type: Tag
+  id: Ring10 # For room generation
+
+- type: Tag
+  id: Ring5 # For room generation
+
+- type: Tag
   id: RollerBed
 
 - type: Tag
