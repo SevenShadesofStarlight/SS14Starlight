@@ -1,0 +1,511 @@
+#region 39x16
+- type: dungeonRoom
+  id: Ring39x16n00
+  size: 39,16
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 1,1
+  tags:
+  - Ring39a
+
+- type: dungeonRoom
+  id: Ring39x16n01
+  size: 39,16
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 41,1
+  tags:
+  - Ring39a
+
+- type: dungeonRoom
+  id: Ring39x16n02
+  size: 39,16
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 81,1
+  tags:
+  - Ring39a
+
+#region 16x39
+- type: dungeonRoom #Wrecked cargo bay
+  id: Ring16x39n00
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 1,18
+  tags:
+  - Ring39b
+
+- type: dungeonRoom
+  id: Ring16x39n01
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 18,18
+  tags:
+  - Ring39b
+
+- type: dungeonRoom
+  id: Ring16x39n02
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 35,18
+  tags:
+  - Ring39b
+
+- type: dungeonRoom
+  id: Ring16x39n03
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 52,18
+  tags:
+  - Ring39c
+
+- type: dungeonRoom
+  id: Ring16x39n04
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 69,18
+  tags:
+  - Ring39c
+
+- type: dungeonRoom
+  id: Ring16x39n05
+  size: 16,39
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 86,18
+  tags:
+  - Ring39c
+
+# - type: dungeonRoom
+#   id: Ring16x39n06
+#   size: 16,39
+#   atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+#   offset: 103,18
+#   tags:
+#   - Ring39b
+
+#region 13x13
+#Row 1: 0-7
+- type: dungeonRoom
+  id: Ring13x13n00
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 1,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n01
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 15,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n02
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 29,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n03
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 43,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n04
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 57,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n05
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 71,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n06
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 85,58
+  tags:
+  - Ring13
+
+- type: dungeonRoom
+  id: Ring13x13n07
+  size: 13,13
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 99,58
+  tags:
+  - Ring13
+
+#Row 2: 8-15
+#Row 3: 16-23
+
+#region 10x10
+#Row 1: 0-9
+- type: dungeonRoom
+  id: Ring10x10n00
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 1,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n01
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 12,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n02
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 23,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n03
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 34,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n04
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 45,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n05
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 56,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n06
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 67,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n07
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 78,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n08
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 89,100
+  tags:
+  - Ring10
+
+- type: dungeonRoom
+  id: Ring10x10n09
+  size: 10,10
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 100,100
+  tags:
+  - Ring10
+
+#Row 2: 10-19
+#Row 3: 20-29
+
+#region 5x5
+- type: dungeonRoom
+  id: Ring5x5n00
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 1,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n01
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 7,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n02
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 13,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n03
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 19,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n04
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 25,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n05
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 31,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n06
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 37,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n07
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 43,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n08
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 49,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n09
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 55,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n10
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 61,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n11
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 67,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n12
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 73,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n13
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 79,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n14
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 85,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n15
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 91,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n16
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 97,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n17
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 103,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n18
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 109,133
+  tags:
+  - Ring5
+
+- type: dungeonRoom
+  id: Ring5x5n19
+  size: 5,5
+  atlas: /Maps/_Starlight/Dungeon/Ring/ring_rooms.yml
+  offset: 115,133
+  tags:
+  - Ring5
+
+#Row 2: 20-39
+#Row 3: 40-59
+
+#region Markers
+#39x16
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker39a
+  name: Ring 39x16 marker
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/39x16.rsi
+    offset: 0,-0.5
+    layers:
+    - state: 39x16
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 39,16
+    roomWhitelist:
+      tags:
+      - Ring39a
+
+#16x39
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker39b
+  name: Ring 16x39 marker - left
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/16x39.rsi
+    offset: -0.5,0
+    layers:
+    - state: 16x39
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 16,39
+    roomWhitelist:
+      tags:
+      - Ring39b
+
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker39c
+  name: Ring 16x39 marker - right
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/16x39.rsi
+    offset: -0.5,0
+    layers:
+    - state: 16x39
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 16,39
+    roomWhitelist:
+      tags:
+      - Ring39c
+
+#13x13
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker13
+  name: Ring 13x13 marker
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/13x13.rsi
+    layers:
+    - state: 13x13
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 13,13
+    roomWhitelist:
+      tags:
+      - Ring13
+
+#10x10
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker10
+  name: Ring 10x10 marker
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/10x10.rsi
+    offset: -0.5,-0.5
+    layers:
+    - state: 10x10
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 10,10
+    roomWhitelist:
+      tags:
+      - Ring10
+
+#5x5
+- type: entity
+  parent: BaseRoomMarker
+  id: RingMarker5
+  name: Ring 5x5 marker
+  components:
+  - type: Sprite
+    sprite: _Starlight/Markers/Areas/5x5.rsi
+    layers:
+    - state: 5x5
+  - type: RoomFill
+    clearExisting: false
+    rotation: false
+    maxSize: 5,5
+    roomWhitelist:
+      tags:
+      - Ring5
