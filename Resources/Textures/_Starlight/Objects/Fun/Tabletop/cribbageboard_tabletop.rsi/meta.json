@@ -1,0 +1,16 @@
+﻿{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "State based copyright",
+    "size": {
+        "x": 241,
+        "y": 890
+    },
+    "metaAtlas": false,
+    "states": [
+        {
+            "name": "board_tabletop",
+            "copyright": "SevenShades"
+        }
+    ]
+}

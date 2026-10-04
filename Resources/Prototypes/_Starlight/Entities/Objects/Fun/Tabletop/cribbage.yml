@@ -1,0 +1,53 @@
+- type: entity
+  parent: BaseBoardEntity
+  id: CribbageBoard
+  name: cribbage board
+  description: Best paired with cards.
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Tabletop/cribbageboard.rsi
+    state: board
+  - type: TabletopGame
+    boardName: tabletop-cribbage-board-name
+    size: 241, 890
+    setup:
+      !type:TabletopCribbageSetup
+      boardPrototype: &CribbageBoard CribbageBoardTabletop
+
+- type: entity
+  parent: BaseBoardTabletop
+  id: *CribbageBoard
+  name: cribbage board
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Tabletop/cribbageboard_tabletop.rsi
+    state: board_tabletop
+
+# Pegs
+- type: entity
+  parent: BaseTabletopPiece
+  id: RedPeg
+  name: red peg
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Tabletop/cribbage_pieces.rsi
+    state: peg-red
+
+- type: entity
+  parent: BaseTabletopPiece
+  id: WhitePeg
+  name: white peg
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Tabletop/cribbage_pieces.rsi
+    state: peg-white
+
+- type: entity
+  parent: BaseTabletopPiece
+  id: BluePeg
+  name: blue peg
+  components:
+  - type: Sprite
+    sprite: _Starlight/Objects/Fun/Tabletop/cribbage_pieces.rsi
+    state: peg-blue
